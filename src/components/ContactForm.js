@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import styled from 'styled-components';
-
+import React, { useState } from "react";
 import {
   UncontrolledAlert,
   Button,
@@ -16,7 +14,6 @@ const ContactForm = () => {
   const initialFormState = {name: '', email: '', phone: '', company: '', message: ''};
   const [emailForm, setEmailForm] = useState(initialFormState);
   const [messageStat, setMessageStat] = useState({color: '', message: ''});
-
 
   const sendEmail = () => {
     const templateId = 'personal_website_contact';
@@ -97,7 +94,7 @@ const ContactForm = () => {
               <label>Message</label>
               <Input
                 placeholder="Hello there!"
-                type="text"
+                type="textarea"
                 value={emailForm.message}
                 onChange={e => setEmailForm({...emailForm, message: e.target.value})}
               />
