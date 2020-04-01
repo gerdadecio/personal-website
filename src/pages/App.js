@@ -8,9 +8,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  FormGroup,
-  Form,
-  Input,
   NavItem,
   NavLink,
   Nav,
@@ -27,6 +24,7 @@ import {
 
 // core components
 import MainNav from "../components/MainNav";
+import ContactForm from "../components/ContactForm";
 
 const carouselItems = [
   {
@@ -64,8 +62,6 @@ class App extends React.Component {
       company: '',
       message: '',
     };
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
   }
   componentDidMount() {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -92,30 +88,6 @@ class App extends React.Component {
       [stateName]: index
     });
   }
-  handleChange = (e) => {
-    console.log('target name:', e.target.name)
-    this.setState({[e.target.name]: e.target.value})
-  }
-  handleSubmit (_e) {
-    const templateId = 'personal_website_contact';
-    const serviceId = 'gmail';
-
-    this.sendFeedback(serviceId, templateId, {
-      message: `${this.state.message} -- Company: ${this.state.company}`,
-      from_name: this.state.name,
-      reply_to: this.state.email,
-      phone: this.state.phone
-    })
-  }
-  sendFeedback (serviceId, templateId, variables) {
-    window.emailjs.send(
-      serviceId, templateId, variables
-      ).then(res => {
-        console.log('Email successfully sent!')
-      })
-      // Handle errors here however you like, or use a React error boundary
-      .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
-    }
 
   render() {
     return (
@@ -345,87 +317,7 @@ class App extends React.Component {
                       <h5 className="text-on-back">reach</h5>
                     </CardHeader>
                     <CardBody>
-                      <Form>
-                        <Row>
-                          <Col md="6">
-                            <FormGroup>
-                              <label>Your Name</label>
-                              <Input
-                                type="text"
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.handleChange}
-                              />
-                            </FormGroup>
-                          </Col>
-                          <Col md="6">
-                            <FormGroup>
-                              <label>Email address</label>
-                              <Input
-                                type="email"
-                                name="email"
-                                value={this.state.email}
-                                onChange={this.handleChange}
-                              />
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Col md="6">
-                            <FormGroup>
-                              <label>Phone</label>
-                              <Input
-                                type="text"
-                                name="phone"
-                                value={this.state.phone}
-                                onChange={this.handleChange}
-                              />
-                            </FormGroup>
-                          </Col>
-                          <Col md="6">
-                            <FormGroup>
-                              <label>Company</label>
-                              <Input
-                                type="text"
-                                name="company"
-                                value={this.state.company}
-                                onChange={this.handleChange}
-                              />
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Col md="12">
-                            <FormGroup>
-                              <label>Message</label>
-                              <Input
-                                placeholder="Hello there!"
-                                type="text"
-                                name="message"
-                                value={this.state.message}
-                                onChange={this.handleChange}
-                              />
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                        <Button
-                          className="btn-round float-right"
-                          color="primary"
-                          data-placement="right"
-                          id="tooltip341148792"
-                          type="button"
-                          onClick={this.handleSubmit}
-                        >
-                          Send
-                        </Button>
-                        <UncontrolledTooltip
-                          delay={0}
-                          placement="right"
-                          target="tooltip341148792"
-                        >
-                          Can't wait for your message
-                        </UncontrolledTooltip>
-                      </Form>
+                      <ContactForm />
                     </CardBody>
                   </Card>
                 </Col>
