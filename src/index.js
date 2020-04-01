@@ -13,6 +13,6 @@ render(
 )
 
 // Google Analytics
-ReactGA.initialize('UA-56497904-2');
+ReactGA.initialize('UA-56497904-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
