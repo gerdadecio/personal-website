@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - export
+      - npm install -g npm
+      - npm config list
+      - npm install --production
+
+  build:
+    commands:
+      - ls && npm run build
+
+  post_build:
+    commands:
+      - if [ $CODEBUILD_BUILD_SUCCEEDING -eq 0 ] ; then exit 1; fi
+      - BUCKET_NAME=`echo "gerdadecio-website" | tr '[:upper:]' '[:lower:]'`
+      - aws s3 sync ./build/ s3://$BUCKET_NAME --acl public-read
