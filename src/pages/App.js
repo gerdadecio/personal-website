@@ -85,8 +85,9 @@ class App extends React.Component {
                   <h1 className="profile-title text-left">Gerda Decio</h1>
                   <h5 className="text-on-back">it's me</h5>
                   <p className="profile-description">
-                    <p>I'm a Software Development Engineer currently based in Sydney, Australia. In the past years I have worked for different companies and startups from different industries using the latest tech stack like Ruby/Rails, ReactJs, AWS, and more.</p>
-                    <p>Currently working on <a href="https://yugrel.com" className="warning-link">yugrel.com</a> in my pastime. Building great ideas is my passion, may it be a web app or an awesome mobile niche and also, I ❤️ coffee!!</p>
+                    <p>I'm a Software Development Engineer based in Sydney, Australia.</p>
+                    <p>Been working on <a href="https://yugrel.com" className="warning-link">yugrel.com</a> in my pastime lately. </p>
+                    <p>Building great ideas is my passion, may it be a web app or an awesome mobile niche and also, I <span role="img" aria-label="emoji">❤️</span> coffee!!</p>
                     <p>**You can find the source code of this website in <a href="https://github.com/gerdadecio/personal-website">Github</a></p>
                   </p>
                 </Col>
