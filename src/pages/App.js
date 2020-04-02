@@ -16,6 +16,7 @@ import {
 import MainNav from "../components/MainNav";
 import ContactForm from "../components/ContactForm";
 import Profile from "../components/Profile";
+import WorkTimeline from "../components/WorkTimeline";
 
 const carouselItems = [
   {
@@ -108,6 +109,11 @@ class App extends React.Component {
           </div>
           <div className="section">
             <Container>
+              <img
+                alt="..."
+                className="path"
+                src={require("../assets/img/path5.png")}
+              />
               <Row className="justify-content-between">
                 <Col md="6">
                   <Row className="justify-content-between align-items-center">
@@ -120,6 +126,16 @@ class App extends React.Component {
                   <p className="profile-description text-left">
                   It takes knowledge, smart work, and dedication to make great ideas come to life. I have been helping make great ideas happen for almost a decade and am always ready for new challenges and exciting projects.
                   </p>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+          <div className="section">
+            <Container>
+              <Row>
+                <Col md="12">
+                  <h5 className="text-on-back text-center">history</h5>
+                  <WorkTimeline />
                 </Col>
               </Row>
             </Container>
