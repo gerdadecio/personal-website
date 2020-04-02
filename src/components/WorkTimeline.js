@@ -15,14 +15,10 @@ const WorkTimeline = () => {
       description: "Fresh out of college, this is where I learn to code with Rails. I was first involve in building the frontend until I learn the rails magic."
     },
     {
-      date: "08/25/2010",
-      title: "Freelance Project: TigerBalm",
-      description: "Worked with Bobby Santiago. Tigerbalm is a website for the company's products."
-    },
-    {
       date: "07/05/2010",
-      title: "Freelance Rails Developer: Exvo",
-      description: "Built some of the exvo apps. Contributed to the development of their theme."
+      title: "Freelance Rails Developer: TigerBalm, Exvo",
+      description: "In the 2nd quarter of the year, I worked with Bobby Santiago with clients like Tigerbalm the famous herbal product. \
+        And in the later months I joined the Exvo team where we built some of the exvo cloud apps."
     },
     {
       date: "06/25/2011",
@@ -56,6 +52,11 @@ const WorkTimeline = () => {
       title: "Ruby on Rails Developer at AssemblyPayments",
       description: "Assembly is the world’s most flexible payments platform. The platform is the only end to end solution that lets you accept, manage and disburse payments in any way you imagine. \
         I worked as a backend developer for making the API robust, secured, and also built new features for the system."
+    },
+    {
+      date: "09/17/2018",
+      title: "Software Engineer at RevtechMedia",
+      description: "Currently connected with RevtechMedia - a marketing company with a focus on consumer savings. They have several media web/app platforms which we are constantly innovating."
     }
   ]
   const [previousValue, setPreviousValue] = useState(0);
