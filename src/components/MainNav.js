@@ -184,6 +184,16 @@ class MainNav extends React.Component {
                   <p className="d-lg-none d-xl-none">Instagram</p>
                 </NavLink>
               </NavItem>
+              <NavItem className="p-0">
+                <NavLink
+                  data-placement="bottom"
+                  href="https://blog.gerdadecio.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <p>Blog</p>
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>

@@ -87,8 +87,8 @@ class App extends React.Component {
                   <h5 className="text-on-back">it's me</h5>
                   <p className="profile-description">
                     <p>I'm a Software Development Engineer based in Sydney, Australia.</p>
-                    <p>Been working on <a href="https://yugrel.com" className="warning-link">yugrel.com</a> in my pastime lately. </p>
-                    <p>Building great ideas is my passion, may it be a web app or an awesome mobile niche and also, I <span role="img" aria-label="emoji">❤️</span> coffee!!</p>
+                    <p>Been working on <a href="https://yugrel.com" className="warning-link">yugrel.com</a> in my pastime lately and sometimes I write random stuff <a href="https://blog.gerdadecio.com">here</a>.<br/><br/></p>
+                    <p>Building great ideas is my passion, may it be a web app or an awesome mobile niche and also, I <span role="img" aria-label="emoji">❤️</span> coffee!!<br/><br/></p>
                     <p>**You can find the source code of this website in <a href="https://github.com/gerdadecio/personal-website">Github</a></p>
                   </p>
                 </Col>
@@ -97,10 +97,10 @@ class App extends React.Component {
                     mainPhotoUrl={require("../assets/img/me.jpeg")}
                     mainText="skills & stuff"
                     socialIcons={[
-                      {url: 'http://www.github.com/gerdadecio', title: 'github', tip: 'Checkout'},
-                      {url: 'http://ph.linkedin.com/in/gerdadecio', title: 'linkedin', tip: 'Connect with me'},
-                      {url: 'http://www.twitter.com/gerdadecio', title: 'twitter', tip: 'Follow me'},
-                      {url: 'http://www.instagram.com/iamgerdadecio', title: 'instagram', tip: 'Follow me'},
+                      {url: 'https://github.com/gerdadecio', title: 'github', tip: 'Checkout'},
+                      {url: 'https://linkedin.com/in/gerdadecio', title: 'linkedin', tip: 'Connect with me'},
+                      {url: 'https://twitter.com/gerdadecio', title: 'twitter', tip: 'Follow me'},
+                      {url: 'https://instagram.com/iamgerdadecio', title: 'instagram', tip: 'Follow me'},
                     ]}
                   />
                 </Col>
